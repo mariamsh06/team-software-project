@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Finder</title>
+</head>
+<body>
+    <h1>Upcoming Events</h1>
+
+    {% if events %}
+        <ul>
+            {% for event in events %}
+                <li>
+                    <strong>{{ event.name }}</strong><br>
+                    <p>Location: Latitude {{ event.location.latitude }}, Longitude {{ event.location.longitude }}</p>
+                    <p>Date: {{ event.start }}</p>
+                    <p>Description: {{ event.description }}</p>
+                    <a href="{{ event.url }}" target="_blank">Event Details</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No events found.</p>
+    {% endif %}
+</body>
+</html>
+
