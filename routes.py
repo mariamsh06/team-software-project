@@ -1,6 +1,6 @@
-import requests
-from flask import jsonify
 from . import app
+import requests
+from flask import render_template, request
 
 @app.route('/')
 def index():
@@ -16,7 +16,8 @@ def index():
 
     if response.status_code == 200:
         events = response.json()
-        return jsonify(events["results"][:5])  # just return first 5 events
+        return render_template("index.html", events=events["results"])
+ 
     else:
         return f"Error: Unable to fetch events, Status Code: {response.status_code}", 500
 
