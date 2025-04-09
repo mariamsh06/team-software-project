@@ -1,0 +1,98 @@
+/* Global styles to reset default spacing and set the base font */
+body {
+    font-family: Arial, sans-serif; /* Clean and easy-to-read font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Light background color for the whole page */
+}
+
+/* Header Section: Make sure the navigation bar is clean and user-friendly */
+header {
+    background-color: #333; /* Dark background to make the header stand out */
+    color: white; /* White text to contrast against the dark background */
+    padding: 10px 0; /* Space above and below the header content */
+    text-align: center; /* Center the navigation links */
+}
+
+/* Navigation menu styling */
+header nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Style for the individual list items (links) */
+header nav ul li {
+    display: inline; /* Display links horizontally */
+    margin-right: 20px; /* Space between each link */
+}
+
+/* Style for the links in the navigation menu */
+header nav ul li a {
+    color: white; /* White text for the links */
+    text-decoration: none; /* Remove the underline from links */
+}
+
+/* Hero Section: Big welcoming title and intro for the user */
+.hero {
+    background-color: #abc5de; /* Blue background to catch attention */
+    color: white; /* White text to contrast the blue */
+    padding: 50px 20px; /* Space around the text */
+    text-align: center; /* Center the content in the hero section */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Big title font size for emphasis */
+}
+
+/* Filter Section: Style for the location filter form */
+.filter {
+    margin: 20px; /* Space around the filter section */
+    padding: 20px; /* Space inside the filter section */
+    background-color: white; /* White background for the filter area */
+    border-radius: 8px; /* Round the corners of the filter box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the box */
+}
+
+/* Form layout inside the filter section */
+.filter form {
+    display: flex; /* Align items in a column */
+    flex-direction: column; /* Stack the form elements vertically */
+    align-items: center; /* Center the form elements */
+}
+
+/* Label styling for the filter form */
+.filter label {
+    font-size: 1.2rem; /* Slightly bigger text for the label */
+    margin-bottom: 10px; /* Space below the label */
+}
+
+/* Style for the location dropdown menu */
+.filter select {
+    padding: 8px; /* Space inside the dropdown */
+    font-size: 1rem; /* Set a readable font size */
+    margin-bottom: 20px; /* Space below the dropdown */
+}
+
+/* Submit button styling: clean and interactive */
+.filter button {
+    padding: 10px 20px; /* Space inside the button */
+    background-color: #0066cc; /* Matching blue color for the button */
+    color: white; /* White text */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Rounded button corners */
+}
+
+/* Button hover effect: change color when hovered over */
+.filter button:hover {
+    background-color: #004c99; /* Darker blue when the button is hovered */
+}
+
+/* Footer Section: Basic styling for the footer at the bottom */
+footer {
+    text-align: center; /* Center the footer text */
+    padding: 20px; /* Space around the footer content */
+    background-color: #333; /* Dark background for footer to match the header */
+    color: white; /* White text for the footer */
+}
