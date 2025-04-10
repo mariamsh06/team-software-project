@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Planner</title>
-    <!-- link to the CSS file -->
-    <link rel="stylesheet" href="designs.css">
+    <!-- Correctly linked to CSS in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='designs.css') }}">
 </head>
 <body>
-    <!-- Header Section: This contains the navigation bar -->
+    <!-- Header Section -->
     <header>
         <nav>
-            <!-- Navigation menu: Home, Events, About -->
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Events</a></li>
@@ -20,22 +19,26 @@
         </nav>
     </header>
 
-    <!-- Main Content Section: This is the heart of the homepage -->
+    <!-- Main Content -->
     <main>
-        <!-- Hero Section: Big welcome message & intro to the site -->
+        <!-- Hero Section -->
         <section class="hero">
             <h1>Welcome to CityPulse!</h1>
             <p>Discover and plan events in Cairo to make your day memorable.</p>
         </section>
 
-        <!-- Filter Section: The location filter for users to choose their city -->
+        <!-- Filter Section -->
         <section class="cairoLocationFilter">
             <h2>Filter Events by Location</h2>
-            <!-- Simple form with a drop-down to select Cairo as the location -->
-            <form action="#" method="GET">
+            <form action="/events" method="GET">
                 <label for="location">Select a location:</label>
                 <select id="location" name="location">
-                    <option value="cairo">Cairo</option> <!-- Cairo is the only available location -->
+                    <option value="cairo">Cairo</option>
                 </select>
-                <!-- Submit button for the form -->
-                <button type="submit
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
