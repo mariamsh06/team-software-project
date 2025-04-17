@@ -4,51 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body style="background-color: #FAFAFA; color: #2E2E2E; font-family: Arial, sans-serif;">
+<body class="dark-theme">
 
-    <header style="background-color: #1E90FF; padding: 1rem;">
+    <header class="navbar">
         <nav>
-            <ul style="list-style: none; display: flex; gap: 20px; justify-content: center; margin: 0; padding: 0;">
-                <li><a href="/" style="color: white; text-decoration: none;">Home</a></li>
-                <li><a href="/events" style="color: white; text-decoration: none;">Events</a></li>
-                <li><a href="#" style="color: white; text-decoration: none;">Contact Us</a></li>
+            <ul class="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <main style="padding: 2rem;">
-        <h1 style="text-align: center; color: #1E90FF;">Upcoming Events</h1>
+    <main class="main-content">
+        <h1 class="page-title">UPCOMING EVENTS</h1>
 
-        <!-- Filter Bar -->
-        <form method="get" action="/events" style="text-align: center; margin-bottom: 2rem;">
-            <label for="category" style="font-weight: bold; margin-right: 10px;">Filter by Category:</label>
-            <select name="category" id="category" style="padding: 0.5rem; border-radius: 6px; border: 1px solid #C3B1E1;">
+        <form method="get" action="/events" class="filter-form">
+            <label for="category">Filter by Category:</label>
+            <select name="category" id="category">
                 <option value="">All</option>
                 <option value="concerts">Concerts</option>
                 <option value="sports">Sports</option>
                 <option value="festivals">Festivals</option>
                 <option value="conferences">Conferences</option>
             </select>
-            <button type="submit" style="margin-left: 10px; padding: 0.5rem 1rem; background-color: #FF6B6B; color: white; border: none; border-radius: 6px;">Filter</button>
+            <button type="submit">Filter</button>
         </form>
 
-        <!-- Events List -->
-        <div class="events-list" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 2rem;">
+        <div class="events-list">
             {% for event in events %}
-                <div class="event-card" style="background-color: white; border: 1px solid #C3B1E1; border-radius: 12px; padding: 1.5rem; width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <h2 style="color: #FF6B6B;">{{ event.title }}</h2>
-                    <p><strong>Date:</strong> {{ event.start[:10] }}</p>
-                    <p><strong>Location:</strong> Cairo</p> 
-                    <a href="{{ event.url }}" class="event-link" target="_blank" style="display: inline-block; margin-top: 10px; color: white; background-color: #1E90FF; padding: 10px 15px; border-radius: 6px; text-decoration: none;">More Details</a>
+                <div class="event-card">
+                    <h2>{{ event.title }}</h2>
+                    <div class="event-details">
+                        <p><strong>Date:</strong> {{ event.start[:10] }}</p>
+                        <p><strong>Location:</strong> Cairo</p>
+                    </div>
+                    <a href="{{ event.url }}" class="event-link" target="_blank">Book Now</a>
                 </div>
             {% endfor %}
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 1rem; background-color: #C3B1E1;">
+    <footer class="footer">
         <p>&copy; 2025 CityPulse by SMA</p>
     </footer>
+
 </body>
 </html>
