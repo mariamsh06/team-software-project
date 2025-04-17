@@ -1,44 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Planner</title>
-    <!-- Correctly linked to CSS in the static folder -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='designs.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Pulse</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset + Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      color: #2b2b2b;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* YouTube Video Background */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .video-bg iframe {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* Header Navigation */
+    header nav {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 600;
+      color: white;
+    }
+
+    /* Hero Title */
+    .hero {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      text-align: center;
+      color: white;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: white;
+    }
+
+    /* Filter Search */
+    .cairoLocationFilter {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(43, 43, 43, 0.4); /* semi-transparent gray */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px 30px;
+      border-radius: 16px;
+      z-index: 2;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .cairoLocationFilter h2,
+    .cairoLocationFilter label {
+      color: white;
+    }
+
+    select {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #2b2b2b;
+    }
+
+    button {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      background-color: white;
+      color: #2b2b2b;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
+
+  <!-- YouTube Video Background -->
+  <div class="video-bg">
+    <iframe
+      src="https://www.youtube.com/embed/MY3kolw6mNI?start=2429&autoplay=1&mute=1&controls=0&loop=1&playlist=MY3kolw6mNI&modestbranding=1&showinfo=0"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+        <ul>
+          <li><a href="/">Home</a></li> 
+                <li><a href="/events">Events</a></li>
+                <li><a href="/about">About Us</a></li>
+        </ul>
+      </nav>
     </header>
-
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Welcome to CityPulse!</h1>
-            <p>Discover and plan events in Cairo to make your day memorable.</p>
-        </section>
-
-        <!-- Filter Section -->
-        <section class="cairoLocationFilter">
-            <h2>Filter Events by Location</h2>
-            <form action="/events" method="GET">
-                <label for="location">Select a location:</label>
-                <select id="location" name="location">
-                    <option value="cairo">Cairo</option>
-                </select>
-                <button type="submit">Search</button>
-            </form>
-        </section>
-    </main>
-</body>
-
-</html>
+  
+    <!-- Hero Title -->
+    <section class="hero">
+      <h1>City Pulse</h1>
+      <p>Discover and plan events in Cairo to make your day memorable.</p>
+    </section>
+  
+    <!-- Search/Filter Section -->
+    <section class="cairoLocationFilter">
+      <h2>Filter Events by Location</h2>
+      <form action="/events" method="GET">
+        <label for="location">Select a location:</label>
+        <select id="location" name="location">
+          <option value="cairo">Cairo</option>
+        </select>
+        <br>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+  
+  </body>
+  </html>
