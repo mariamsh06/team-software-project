@@ -1,6 +1,6 @@
 from . import app
 import requests
-from flask import render_template, request
+from flask import render_template, request, flash, redirect, url_for
 
 @app.route('/') # this is out main page thats gonna open when u first click on link i set it to be homepage
 def home():
@@ -34,6 +34,21 @@ def events():
         return render_template("events.html", events=events)
     else:
         return f"Error: Unable to fetch events. Status Code: {response.status_code}", 500
+    
+
+
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        flash('Your message has been received! We\'ll get back to you soon.', 'success')
+        return redirect(url_for('contact'))
+    return render_template('contact.html')
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 
