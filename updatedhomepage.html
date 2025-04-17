@@ -8,9 +8,6 @@
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- External CSS (optional) -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='designs.css') }}">
-
   <style>
     /* Reset + Base */
     * {
@@ -26,7 +23,7 @@
       overflow: hidden;
     }
 
-    /* Video Background Container */
+    /* YouTube Video Background */
     .video-bg {
       position: fixed;
       top: 0;
@@ -42,7 +39,7 @@
       height: 100vh;
     }
 
-    /* Navigation */
+    /* Header Navigation */
     header nav {
       position: absolute;
       top: 20px;
@@ -63,7 +60,7 @@
       color: white;
     }
 
-    /* Hero Title & Subtitle */
+    /* Hero Title */
     .hero {
       position: absolute;
       top: 45%;
@@ -85,49 +82,50 @@
       color: white;
     }
 
-    /* Filter/Search Box */
+    /* Filter Search */
     .cairoLocationFilter {
       position: absolute;
       top: 65%;
       left: 50%;
       transform: translateX(-50%);
-      background-color: rgba(255, 255, 255, 0.85);
+      background: rgba(43, 43, 43, 0.4); /* semi-transparent gray */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       padding: 20px 30px;
-      border-radius: 12px;
+      border-radius: 16px;
       z-index: 2;
       text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
-    .cairoLocationFilter h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #2b2b2b;
-    }
-
+    .cairoLocationFilter h2,
     .cairoLocationFilter label {
-      font-weight: 600;
-    }
-
-    select, button {
-      padding: 10px 14px;
-      border: none;
-      border-radius: 6px;
-      margin: 10px 5px 0;
+      color: white;
     }
 
     select {
-      background-color: #f0f0f0;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #2b2b2b;
     }
 
     button {
-      background-color: #2b2b2b;
-      color: white;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      background-color: white;
+      color: #2b2b2b;
+      font-weight: bold;
       cursor: pointer;
       transition: 0.3s ease;
     }
 
     button:hover {
-      background-color: #444;
+      background-color: #f0f0f0;
     }
   </style>
 </head>
@@ -147,20 +145,19 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/events">Events</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Title -->
+  <!-- Hero Title -->
   <section class="hero">
     <h1>City Pulse</h1>
     <p>Discover and plan events in Cairo to make your day memorable.</p>
   </section>
 
-  <!-- Search / Filter Form -->
+  <!-- Search/Filter Section -->
   <section class="cairoLocationFilter">
     <h2>Filter Events by Location</h2>
     <form action="/events" method="GET">
@@ -168,9 +165,11 @@
       <select id="location" name="location">
         <option value="cairo">Cairo</option>
       </select>
+      <br>
       <button type="submit">Search</button>
     </form>
   </section>
 
 </body>
 </html>
+
