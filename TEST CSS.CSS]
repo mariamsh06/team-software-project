@@ -1,0 +1,27 @@
+/* static/style.css */
+
+/* Event details page styling */
+.event-details {
+    background-color: #FAFAFA; /* Snow White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.event-details h2 {
+    color: #1E90FF; /* Electric Blue for event title */
+}
+
+.event-details p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.event-details a {
+    color: #FF6B6B; /* Sunset Coral for links */
+}
+
+.event-details a:hover {
+    color: #FF6B6B; /* Sunset Coral hover */
+}
