@@ -1,0 +1,229 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: #2b2b2b;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #e4b6b2;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+h1, h2, h3 {
+    color: #cfa8a5;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.about-hero {
+    background-color: #2b2b2b;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    color: #cfa8a5;
+}
+
+.about-hero p {
+    font-size: 1.25rem;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 3rem 0;
+    background-color: #2a2a2a;
+}
+
+.mission-grid {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-content {
+    max-width: 800px;
+}
+
+.mission-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Section */
+.team-section {
+    padding: 3rem 0;
+    background-color: #2b2b2b;
+}
+
+.team-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background-color: #333;
+    padding: 1.5rem;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-card h3 {
+    color: #cfa8a5;
+    margin: 0.5rem 0;
+}
+
+.team-card .role {
+    color: #999;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #e0e0e0;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: #cfa8a5;
+}
+
+/* Values Section */
+.values-section {
+    padding: 3rem 0;
+    background-color: #2a2a2a;
+}
+
+.values-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    background-color: #333;
+    width: 280px;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.value-card i {
+    font-size: 3rem;
+    color: #cfa8a5;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    color: #cfa8a5;
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    color: #e0e0e0;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #333;
+}
+
+.cta-button {
+    background-color: #cfa8a5;
+    color: #1f1f1f;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e4b6b2;
+}
+
+/* Footer */
+footer {
+    padding: 1rem;
+    background-color: #2b2b2b;
+    color: #999;
+    text-align: center;
+}
+
+.cta-content h2 {
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #e4b6b2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add space above the button */
+}
+
+.cta-button:hover {
+    background-color: #e4b6b2;
+}
