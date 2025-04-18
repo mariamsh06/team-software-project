@@ -23,7 +23,7 @@ def events():
         url = f"{base_url}?{location}&{country}&{limit}"
 
     headers = {
-        "Authorization": "Bearer 5b52pFPahJmUK2XRA4kuH_Yrr8Y9Rjklovb1zhbb"
+        "Authorization": "Bearer tBK21eyBEA9wpCoMwM5_NIaXgNodRa3A1tZewlLh" # THIS IS THE NEW API KEY VALID TIL MAY 2ND  
     }
 
     response = requests.get(url, headers=headers)
