@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body class="dark-theme">
-
+   
     <header class="navbar">
         <nav>
             <ul class="nav-list">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Home</a></li> 
                 <li><a href="/events">Events</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/about">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +42,8 @@
                         <p><strong>Date:</strong> {{ event.start[:10] }}</p>
                         <p><strong>Location:</strong> Cairo</p>
                     </div>
-                    <a href="{{ event.url }}" class="event-link" target="_blank">Book Now</a>
+                    
+                    <a href="/contact" class="event-link">Book Now</a> 
                 </div>
             {% endfor %}
         </div>
@@ -51,6 +52,6 @@
     <footer class="footer">
         <p>&copy; 2025 CityPulse by SMA</p>
     </footer>
-
+    
 </body>
 </html>
